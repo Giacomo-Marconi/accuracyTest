@@ -1,0 +1,72 @@
+/* Generali */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Contenitore del gioco */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Canvas */
+canvas {
+    border: 1px solid black;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Pulsante */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #003f7f;
+}
+
+/* Pannello informazioni */
+.info-panel {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.info-panel label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
