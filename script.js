@@ -56,8 +56,8 @@ function showResults(finalAccuracy) {
     const overlay = document.createElement('div');
     overlay.id = 'resultOverlay';
 
-    const strip = document.createElement('div');
-    strip.id = 'resultStrip';
+    const line = document.createElement('div');
+    line.id = 'resultline';
 
     const accuracyText = document.createElement('div');
     accuracyText.textContent = `Accuracy: ${finalAccuracy}%`;
@@ -66,12 +66,12 @@ function showResults(finalAccuracy) {
     progressBar.id = 'resultBar';
 
     const progress = document.createElement('div');
-    progress.style.width = `${finalAccuracy}%`; // Imposta la larghezza della barra in base all'accuracy
+    progress.style.width = `${finalAccuracy}%`;
     progressBar.appendChild(progress);
 
-    strip.appendChild(accuracyText);
-    strip.appendChild(progressBar);
-    overlay.appendChild(strip);
+    line.appendChild(accuracyText);
+    line.appendChild(progressBar);
+    overlay.appendChild(line);
     document.body.appendChild(overlay);
 }
 
@@ -79,7 +79,7 @@ function startGame() {
     let timeElapsed = 0;
 
     const interval = setInterval(() => {
-        timer.innerText = `Time: ${60 - timeElapsed.toFixed(0)}s`;
+        timer.innerText = `Time: ${20 - timeElapsed.toFixed(0)}s`;
         
         const val = Math.floor(score / generated * 100);
         accuracy.value = isNaN(val) ? 0 : val;
@@ -87,7 +87,6 @@ function startGame() {
         if (timeElapsed >= 20) {
             clearInterval(interval);
 
-            // Show results after 60 seconds
             const finalAccuracy = Math.floor((score / generated) * 100) || 0;
             showResults(finalAccuracy);
         } else {
@@ -124,4 +123,5 @@ function startGame() {
         }
     }, 500);
 }
+
 
