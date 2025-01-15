@@ -145,7 +145,7 @@ progress::-moz-progress-bar {
 }
 
 
-#resultStrip {
+#resultline{
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
     color: #f1f1f1;

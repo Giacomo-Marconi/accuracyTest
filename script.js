@@ -59,6 +59,8 @@ function showResults(finalAccuracy) {
     const line = document.createElement('div');
     line.id = 'resultline';
 
+    line.onclick = window.location.reload.bind(window.location);
+
     const accuracyText = document.createElement('div');
     accuracyText.textContent = `Accuracy: ${finalAccuracy}%`;
 
@@ -76,6 +78,9 @@ function showResults(finalAccuracy) {
 }
 
 function startGame() {
+    const startButton = document.getElementById('startButton');
+    startButton.onclick = null;
+
     let timeElapsed = 0;
 
     const interval = setInterval(() => {
